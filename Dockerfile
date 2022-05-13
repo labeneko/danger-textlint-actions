@@ -1,6 +1,6 @@
-FROM ruby:2.6.3-alpine
+FROM ruby3.2.0-alpine
 
-RUN apk add --update --no-cache git nodejs~=12
+RUN apk add --update --no-cache git nodejs
 RUN gem install danger -v '>= 5.10.3'
 RUN gem install danger-textlint
 
