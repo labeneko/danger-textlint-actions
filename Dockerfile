@@ -1,4 +1,4 @@
-FROM ruby3.1.2-alpine
+FROM ruby:3.1.2-alpine
 
 RUN apk add --update --no-cache git nodejs
 RUN gem install danger -v '>= 5.10.3'
