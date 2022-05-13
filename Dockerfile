@@ -1,9 +1,8 @@
-FROM ruby:3.1.2-alpine
+FROM node:12
 
-RUN apk add --update --no-cache git nodejs~=12
+RUN apt-get install ruby git
 RUN gem install danger -v '>= 5.10.3'
 RUN gem install danger-textlint
-RUN git config --global --add safe.directory /github/workspace
 
 ENTRYPOINT "danger"
 CMD "--verbose"
